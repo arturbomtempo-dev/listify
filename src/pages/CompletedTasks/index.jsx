@@ -1,7 +1,7 @@
-import { PageTitle } from '../../components/PageTitle';
+import { TaskApp } from '../../components/TaskApp';
 
 export function CompletedTasks() {
     return (
-        <PageTitle titleText='Tarefas concluídas' />
+        <TaskApp />
     );
 }
