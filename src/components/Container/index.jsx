@@ -1,4 +1,4 @@
-import { StyledContainer } from '../../assets/styles/components/Container/Container.style';
+import { StyledContainer } from '../../assets/styles/Container/Container.style';
 import PropTypes from 'prop-types';
 
 export function Container({ children }) {

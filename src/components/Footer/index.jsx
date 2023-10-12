@@ -1,4 +1,4 @@
-import { FooterText, StyledFooter } from '../../assets/styles/components/Footer/Footer.style';
+import { FooterText, StyledFooter } from '../../assets/styles/Footer/Footer.style';
 
 export function Footer() {
     return (
