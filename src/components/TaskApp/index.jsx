@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title } from '../../assets/styles/TaskApp/TaskApp.style';
+import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title, LogoContainer } from '../../assets/styles/TaskApp/TaskApp.style';
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
 import add from '../../assets/icons/icon-add.png';
-import logo from '../../assets/icons/logo.png'
+import logo from '../../assets/icons/logo.png';
+import pendente from '../../assets/icons/icon-pending.png';
+import concluido from '../../assets/icons/icon-ok.png';
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useState([]);
@@ -58,12 +60,15 @@ export function TaskApp() {
 
     return (
         <>
+            <LogoContainer>
+                <img src={logo} alt="nossa-logo" />
+            </LogoContainer>
             <ButtonContainer>
                 <Link to="/">
-                    <PageButton onClick={handleActiveTasks}>Tarefas Pendentes</PageButton>
+                    <PageButton onClick={handleActiveTasks}>Tarefas Pendentes<img src={pendente} alt="icon-pendente" /></PageButton>
                 </Link>
                 <Link to="/tarefas-concluidas">
-                    <PageButton onClick={handleCompletedTasks}>Tarefas Concluídas</PageButton>
+                    <PageButton onClick={handleCompletedTasks}>Tarefas Concluídas<img src={concluido} alt="icon-concluido" /></PageButton>
                 </Link>
             </ButtonContainer>
             <Title>

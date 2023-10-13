@@ -19,5 +19,5 @@ export const FooterText = styled.p`
     font-family: 'Poppins', sans-serif;
     padding-top: 30px;
     color: #483434;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 `;
