@@ -1,37 +1,44 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
+    img{
+        width: 200px;
+        height: 200px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 export const PageButton = styled.button`
-    background-color: #AD7BE9;
+    background-color: #483434;
     border: 0;
     width: 250px;
     height: 60px;
     padding: 6px;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    color: #222;
+    color: #F0f0f0;
     font-weight: 500;
     letter-spacing: 1px;
 
     &:hover {
-        background-color: transparent;
-        border: solid 3px #AD7BE9;
-        transition: ease-in-out 0.5s;
+        background-color: #6B4F4F;
+        transition: ease 0.5s;
         cursor: pointer;
-        color: #E5CFF7;
     }
 `;
 
 export const Title = styled.h1`
-    color: #E5CFF7;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
+    color: #483434;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
 `;
 
 export const TaskForm = styled.form`
@@ -43,23 +50,27 @@ export const TaskForm = styled.form`
 
 export const TaskInput = styled.input`
     width: 300px;
-    height: 60px;
+    height: 55px;
     margin-right: 10px;
     border-radius: 10px;
 
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    border: solid 3px #AD7BE9;
-    color: #E5CFF7;
+    border: solid 3px #483434;
+    background-color: #f0f0f0f0;
+    color: #483434;
+    font-weight: 500;
 `;
 
 export const AddTasksButton = styled.button`
     border: 0;
     border-radius: 50px;
+    background: transparent;
 
     img{
-        width: 55px;
+        width: 50px;
+        box-shadow: none;
         cursor: pointer;
     }
 `;

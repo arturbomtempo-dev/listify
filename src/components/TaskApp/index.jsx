@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
 import add from '../../assets/icons/icon-add.png';
+import logo from '../../assets/icons/logo.png'
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useState([]);

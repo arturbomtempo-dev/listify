@@ -14,7 +14,7 @@ export const TaskListItem = styled.li`
 `;
 
 export const WarningText = styled.p`
-    color: #f0f0f0f0;
+    color: #483434;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
 `;
@@ -32,7 +32,7 @@ export const CheckboxCompleted = styled.input`
         justify-content: center;
         width: 25px;
         height: 25px;
-        background-color: #AD7BE9;
+        background-color: #483434;
     }
 
     &:checked:after{
@@ -40,7 +40,7 @@ export const CheckboxCompleted = styled.input`
         display: block;
         width: 5px;
         height: 10px;
-        border: solid white;
+        border: solid #EED6C4;
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -59,7 +59,7 @@ export const TaskText = styled.p`
     text-align: center;
     margin-top: 5px;
 
-    color: #E5CFF7;
+    color: #483434;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
 `;
@@ -68,6 +68,7 @@ export const DeleteButton = styled.button`
     margin-left: 30px;
     border: 0;
     border-radius: 50px;
+    background: transparent;
 
     display: flex;
     align-items: center;
