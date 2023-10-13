@@ -58,10 +58,10 @@ export function TaskApp() {
         <>
             <ButtonContainer>
                 <Link to="/">
-                    <PageButton onClick={handleActiveTasks}>Tarefas pendentes</PageButton>
+                    <PageButton onClick={handleActiveTasks}>Tarefas Pendentes</PageButton>
                 </Link>
                 <Link to="/tarefas-concluidas">
-                    <PageButton onClick={handleCompletedTasks}>Tarefas concluídas</PageButton>
+                    <PageButton onClick={handleCompletedTasks}>Tarefas Concluídas</PageButton>
                 </Link>
             </ButtonContainer>
             <Title>
