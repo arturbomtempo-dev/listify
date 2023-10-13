@@ -35,10 +35,31 @@ export const Title = styled.h1`
 `;
 
 export const TaskForm = styled.form`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 `;
 
 export const TaskInput = styled.input`
+    width: 300px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    border: solid 3px #AD7BE9;
+    color: #E5CFF7;
 `;
 
 export const AddTasksButton = styled.button`
+    border: 0;
+    border-radius: 50px;
+
+    img{
+        width: 55px;
+        cursor: pointer;
+    }
 `;

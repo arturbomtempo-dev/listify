@@ -3,6 +3,7 @@ import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
+import add from '../../assets/icons/icon-add.png';
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useState([]);
@@ -65,7 +66,7 @@ export function TaskApp() {
                 </Link>
             </ButtonContainer>
             <Title>
-                {currentPage === 'ativos' ? 'Tarefas pendentes' : 'Tarefas concluídas'}
+                {currentPage === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}
             </Title>
             {
                 currentPage === 'ativos' ? (
@@ -76,7 +77,7 @@ export function TaskApp() {
                             value={taskInput}
                             onChange={(e) => setTaskInput(e.target.value)}
                         />
-                        <AddTasksButton type="submit">Adicionar</AddTasksButton>
+                        <AddTasksButton type="submit"><img src={add} alt="icon-add" className='icon-add'/></AddTasksButton>
                     </TaskForm>
                 ) : null
             }
