@@ -20,4 +20,8 @@ export const FooterText = styled.p`
     padding-top: 30px;
     color: #483434;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 1800px){
+        margin-bottom: 55px;
+    }
 `;

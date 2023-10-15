@@ -5,6 +5,15 @@ export const ButtonContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: row;
+
+    @media screen and (max-width: 1800px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-top: -30px;
+    }
 `;
 
 export const LogoContainer = styled.div`
@@ -48,6 +57,10 @@ export const PageButton = styled.button`
         width: 30px;
         height: 30px;
         margin-left: 10px;
+    }
+
+    @media screen and (max-width: 1800px){
+        margin-top: 10px;
     }
 `;
 
