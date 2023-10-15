@@ -8,15 +8,20 @@ export const StyledFooter = styled.footer`
 `;
 
 export const SeparationLine = styled.hr`
-    width: 60%;
+    width: 40%;
     border: 0;
     height: 1px;
-    background-color: #E5CFF7;
+    background-color: #483434;
 `
 
 export const FooterText = styled.p`
     text-align: center;
     font-family: 'Poppins', sans-serif;
     padding-top: 30px;
-    color: #f0f0f0f0;
+    color: #483434;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 1800px){
+        margin-bottom: 55px;
+    }
 `;

@@ -1,4 +1,5 @@
 import { CheckboxCompleted, DeleteButton, TasksList ,TaskListItem, TaskText, WarningText } from '../../assets/styles/TaskList/TaskList.style';
+import trash from '../../assets/icons/icon-trash.png'
 
 export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
     return (
@@ -16,7 +17,7 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
                             onChange={() => onCompleteTask(task.id)} 
                         />
                         <TaskText>{task.text}</TaskText>
-                        <DeleteButton onClick={() => onDeleteTask(task.id)}>Excluir</DeleteButton>
+                        <DeleteButton onClick={() => onDeleteTask(task.id)}><img src={trash} alt="icon-trash" /></DeleteButton>
                     </TaskListItem>
                 ))
             )}
