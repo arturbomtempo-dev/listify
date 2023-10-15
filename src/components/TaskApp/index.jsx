@@ -3,10 +3,10 @@ import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
-import add from '../../assets/icons/icon-add.png';
-import logo from '../../assets/icons/logo.png';
-import pendente from '../../assets/icons/icon-pending.png';
-import concluido from '../../assets/icons/icon-ok.png';
+import logo from '../../assets/images/logo.png';
+import add from '../../assets/images/Icons/add-icon.png';
+import pending from '../../assets/images/Icons/pending-icon.png';
+import completed from '../../assets/images/Icons/completed-icon.png';
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useState([]);
@@ -61,14 +61,14 @@ export function TaskApp() {
     return (
         <>
             <LogoContainer>
-                <img src={logo} alt="nossa-logo" />
+                <img src={logo} alt="Logo" />
             </LogoContainer>
             <ButtonContainer>
                 <Link to="/">
-                    <PageButton onClick={handleActiveTasks}>Tarefas Pendentes<img src={pendente} alt="icon-pendente" /></PageButton>
+                    <PageButton onClick={handleActiveTasks}>Tarefas Pendentes<img src={pending} /></PageButton>
                 </Link>
                 <Link to="/tarefas-concluidas">
-                    <PageButton onClick={handleCompletedTasks}>Tarefas Concluídas<img src={concluido} alt="icon-concluido" /></PageButton>
+                    <PageButton onClick={handleCompletedTasks}>Tarefas Concluídas<img src={completed} /></PageButton>
                 </Link>
             </ButtonContainer>
             <Title>
@@ -83,7 +83,7 @@ export function TaskApp() {
                             value={taskInput}
                             onChange={(e) => setTaskInput(e.target.value)}
                         />
-                        <AddTasksButton type="submit"><img src={add} alt="icon-add" className='icon-add'/></AddTasksButton>
+                        <AddTasksButton type="submit"><img src={add} /></AddTasksButton>
                     </TaskForm>
                 ) : null
             }
