@@ -3,7 +3,7 @@ import { FooterText, StyledFooter, SeparationLine } from '../../assets/styles/Fo
 export function Footer() {
     return (
         <StyledFooter>
-            <SeparationLine></SeparationLine>
+            <SeparationLine />
             <FooterText>Desenvolvido por Artur Bomtempo e Letícia França</FooterText>
         </StyledFooter>
     );

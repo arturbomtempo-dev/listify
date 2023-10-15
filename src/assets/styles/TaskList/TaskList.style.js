@@ -9,7 +9,6 @@ export const TaskListItem = styled.li`
     justify-content: center;
     flex-direction: row;
     text-align: center;
-
     margin-bottom: 10px;
 `;
 
@@ -20,10 +19,10 @@ export const WarningText = styled.p`
 `;
 
 export const CheckboxCompleted = styled.input`
-    margin-right: 20px;
-
     width: 20px;
     height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
 
     &:before{
         content: "";
@@ -58,7 +57,6 @@ export const TaskText = styled.p`
     flex-direction: row;
     text-align: center;
     margin-top: 5px;
-
     color: #483434;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
@@ -69,7 +67,6 @@ export const DeleteButton = styled.button`
     border: 0;
     border-radius: 50px;
     background: transparent;
-
     display: flex;
     align-items: center;
     justify-content: center;

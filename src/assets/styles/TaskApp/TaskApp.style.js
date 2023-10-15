@@ -11,7 +11,6 @@ export const ButtonContainer = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
         margin-top: -30px;
     }
 `;
@@ -29,7 +28,6 @@ export const PageButton = styled.button`
     align-items: center;
     justify-content: center;
     flex-direction: row;
-
     background-color: #483434;
     border: 0;
     width: 300px;
@@ -38,7 +36,6 @@ export const PageButton = styled.button`
     margin-right: 20px;
     margin-top: -20px;
     border-radius: 10px;
-    
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     color: #F0f0f0;
@@ -83,7 +80,6 @@ export const TaskInput = styled.input`
     height: 55px;
     margin-right: 10px;
     border-radius: 10px;
-
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
