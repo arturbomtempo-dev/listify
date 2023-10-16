@@ -6,7 +6,7 @@ export const ButtonContainer = styled.div`
     justify-content: center;
     flex-direction: row;
 
-    @media screen and (max-width: 1800px){
+    @media screen and (max-width: 1080px){
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,7 +56,7 @@ export const PageButton = styled.button`
         margin-left: 10px;
     }
 
-    @media screen and (max-width: 1800px){
+    @media screen and (max-width: 1080px){
         margin-top: 10px;
     }
 `;
