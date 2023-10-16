@@ -21,7 +21,7 @@ export const LogoContainer = styled.div`
         margin-top: -50px;
         margin-bottom: -30px;
     }
-`
+`;
 
 export const PageButton = styled.button`
     display: flex;
@@ -38,15 +38,15 @@ export const PageButton = styled.button`
     border-radius: 10px;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    color: #F0f0f0;
+    color: #f0f0f0;
     font-weight: 500;
     letter-spacing: 1px;
-    text-decoration: underline #483434; 
+    text-decoration: underline #483434;
+    transition: ease 0.5s;
+    cursor: pointer;
 
     &:hover {
         background-color: #6B4F4F;
-        transition: ease 0.5s;
-        cursor: pointer;
         text-decoration: underline #6B4F4F; 
     }
 
@@ -90,13 +90,17 @@ export const TaskInput = styled.input`
 `;
 
 export const AddTasksButton = styled.button`
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
     border: 0;
-    border-radius: 50px;
-    background: transparent;
+    border-radius: 50%;
+    background-color: #483434;
+    color: #f0f0f0;
+    transition: ease 0.5s;
+    cursor: pointer;
 
-    img{
-        width: 50px;
-        box-shadow: none;
-        cursor: pointer;
+    &:hover {
+        background-color: #6B4F4F;
     }
 `;

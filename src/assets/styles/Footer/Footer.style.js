@@ -12,7 +12,7 @@ export const SeparationLine = styled.hr`
     border: 0;
     height: 1px;
     background-color: #483434;
-`
+`;
 
 export const FooterText = styled.p`
     text-align: center;

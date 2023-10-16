@@ -3,10 +3,9 @@ import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
-import logo from '../../assets/images/logo.png';
-import add from '../../assets/images/Icons/add-icon.png';
-import pending from '../../assets/images/Icons/pending-icon.png';
-import completed from '../../assets/images/Icons/completed-icon.png';
+import logo from '/images/logo.png';
+import pending from '/images/Icons/pending-icon.png';
+import completed from '/images/Icons/completed-icon.png';
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useState([]);
@@ -83,7 +82,7 @@ export function TaskApp() {
                             value={taskInput}
                             onChange={(e) => setTaskInput(e.target.value)}
                         />
-                        <AddTasksButton type="submit"><img src={add} /></AddTasksButton>
+                        <AddTasksButton type="submit">+</AddTasksButton>
                     </TaskForm>
                 ) : null
             }
