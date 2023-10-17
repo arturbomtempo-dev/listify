@@ -11,7 +11,7 @@ The program developed consists of creating a to-do list in which the user can en
 * [Styled-components](https://styled-components.com/docs): create CSS styles for React components in an elegant and encapsulated way
 
 ## 📁 Project access
-You can view the hosted page by clicking [here](https://to-do-list-artur-leticia.vercel.app/).
+You can view the hosted page by clicking [here](https://to-do-list-framework.vercel.app/).
 
 ## 👥 Developers
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/96635074?v=4" width=115><br><sub>Artur Bomtempo</sub>](https://github.com/ArturColen) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/99284224?v=4" width=115><br><sub>Letícia França</sub>](https://github.com/LeticiaSFranca) |
