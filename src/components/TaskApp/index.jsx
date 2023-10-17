@@ -3,9 +3,9 @@ import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
-import logo from '/images/logo.png';
-import pending from '/images/Icons/pending-icon.png';
-import completed from '/images/Icons/completed-icon.png';
+import logo from '/logo.png';
+import pending from '../../assets/Images/Icons/pending-icon.png';
+import completed from '../../assets/Images/Icons/completed-icon.png';
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useState([]);

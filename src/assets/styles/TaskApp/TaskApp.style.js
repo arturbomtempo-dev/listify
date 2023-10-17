@@ -84,7 +84,7 @@ export const TaskInput = styled.input`
     font-family: 'Poppins', sans-serif;
     text-align: center;
     border: solid 3px #1D1B64;
-    background-color: #F0F0F0F0;
+    background-color: #f0f0f0f0;
     color: #030140;
     font-weight: 500;
 `;

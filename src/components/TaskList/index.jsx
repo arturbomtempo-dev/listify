@@ -1,5 +1,5 @@
 import { CheckboxCompleted, DeleteButton, TasksList ,TaskListItem, TaskText, WarningText } from '../../assets/styles/TaskList/TaskList.style';
-import trash from '/images/Icons/trash-icon.png';
+import trash from '../../assets/Images/Icons/trash-icon.png';
 
 export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
     return (

@@ -8,8 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        /* background: linear-gradient(50deg, #030140, #f0f0f0); */
-        background-color: #F0f0f0f0;
+        background-color: #f0f0f0f0;
         background-position: center;
         background-size: cover;
         background-repeat: repeat-y;
