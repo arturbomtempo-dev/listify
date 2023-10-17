@@ -11,14 +11,14 @@ export const SeparationLine = styled.hr`
     width: 40%;
     border: 0;
     height: 1px;
-    background-color: #483434;
+    background-color: #030140;
 `;
 
 export const FooterText = styled.p`
     text-align: center;
     font-family: 'Poppins', sans-serif;
     padding-top: 30px;
-    color: #483434;
+    color: #030140;
     margin-bottom: 30px;
 
     @media screen and (max-width: 1080px){

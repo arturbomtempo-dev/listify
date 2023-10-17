@@ -8,7 +8,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        background: linear-gradient(50deg, #6B4F4F, #EED6C4);
+        /* background: linear-gradient(50deg, #030140, #f0f0f0); */
+        background-color: #F0f0f0f0;
         background-position: center;
         background-size: cover;
         background-repeat: repeat-y;
@@ -18,11 +19,11 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         &::-webkit-scrollbar-track {
-            background: #EED6C4;
+            background: #f0f0f0;
         }
         
         &::-webkit-scrollbar-thumb {
-            background-color: #483434;
+            background-color: #030140;
             width: 10px;
         }
     }

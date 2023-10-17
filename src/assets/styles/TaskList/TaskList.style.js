@@ -31,7 +31,7 @@ export const CheckboxCompleted = styled.input`
         justify-content: center;
         width: 25px;
         height: 25px;
-        background-color: #483434;
+        background-color: #030140;
     }
 
     &:checked:after{
@@ -39,7 +39,7 @@ export const CheckboxCompleted = styled.input`
         display: block;
         width: 5px;
         height: 10px;
-        border: solid #EED6C4;
+        border: solid #f0f0f0;
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -57,7 +57,7 @@ export const TaskText = styled.p`
     flex-direction: row;
     text-align: center;
     margin-top: 5px;
-    color: #483434;
+    color: #0f0f0f;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
 `;
