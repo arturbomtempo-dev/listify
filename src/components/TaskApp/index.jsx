@@ -6,27 +6,16 @@ import { v4 as uuidv4 } from 'uuid';
 import logo from '/logo.png';
 import pending from '../../assets/Images/Icons/pending-icon.png';
 import completed from '../../assets/Images/Icons/completed-icon.png';
+import { useLocalStorage } from '@uidotdev/usehooks';
 
 export function TaskApp() {
-    const [tasksList, setTasksList] = useState([]);
+    const [tasksList, setTasksList] = useLocalStorage('tasksList', []);
     const [taskInput, setTaskInput] = useState('');
     const [currentPage, setCurrentPage] = useState('ativos');
 
-    useEffect(() => {
-        const savedTasks = localStorage.getItem('tasksList');
-    
-        if (savedTasks) {
-            setTasksList(JSON.parse(savedTasks));
-        }
-    }, []);    
-
-    useEffect(() => {
-        localStorage.setItem('tasksList', JSON.stringify(tasksList));
-    }, [tasksList]);
-
     const handleTaskSubmit = (e) => {
         e.preventDefault();
-
+        
         if (taskInput.trim() !== '') {
             const newTask = { id: uuidv4(), text: taskInput, completed: false };
             setTasksList([...tasksList, newTask]);
