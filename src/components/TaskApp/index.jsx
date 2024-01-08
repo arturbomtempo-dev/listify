@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title, LogoContainer } from '../../assets/styles/TaskApp/TaskApp.style';
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';

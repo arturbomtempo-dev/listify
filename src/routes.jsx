@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BasePage from './pages/BasePage';
 import { TaskApp } from './components/TaskApp';
-import { Navigate } from 'react-router-dom'; 
+import { Page404 } from './pages/Page404';
 
 export function AppRoutes() {
     return (
@@ -10,7 +10,7 @@ export function AppRoutes() {
                 <Route path="/" element={<BasePage />}>
                     <Route index element={<TaskApp currentPage="ativos" />} />
                     <Route path="/tarefas-concluidas" element={<TaskApp currentPage="concluidos" />} />
-                    <Route path="*" element={<Navigate to="/" />} />
+                    <Route path="*" element={<Page404 />} />
                 </Route>
             </Routes>
         </BrowserRouter>
