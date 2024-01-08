@@ -9,6 +9,7 @@ export function AppRoutes() {
                 <Route path="/" element={<BasePage />}>
                     <Route index element={<TaskApp currentPage="ativos" />} />
                     <Route path="/tarefas-concluidas" element={<TaskApp currentPage="concluidos" />} />
+                    <Route path="*" element={<TaskApp currentPage="ativos" />} />
                 </Route>
             </Routes>
         </BrowserRouter>
