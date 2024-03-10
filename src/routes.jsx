@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import BasePage from './pages/BasePage';
+import { BasePage } from './pages/BasePage';
 import { TaskApp } from './components/TaskApp';
 import { Page404 } from './pages/Page404';
 

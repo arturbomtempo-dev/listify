@@ -2,7 +2,7 @@ import { Container } from '../../components/Container';
 import { Footer } from '../../components/Footer';
 import { Outlet } from 'react-router-dom';
 
-export default function BasePage() {
+export function BasePage() {
     return (
         <main>
             <Container>

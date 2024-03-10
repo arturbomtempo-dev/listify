@@ -15,6 +15,7 @@ export function Page404() {
     const handleCompletedTasks = () => {
         setCurrentPage('concluidos');
     };
+    
     return (
         <>
             <LogoContainer>
