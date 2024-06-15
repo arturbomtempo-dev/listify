@@ -25,3 +25,14 @@ export const FooterText = styled.p`
         margin-bottom: 55px;
     }
 `;
+
+export const FooterLink = styled.a`
+    color: #030140;
+    margin-left: 5px;
+    text-decoration: none;
+
+    &:hover {
+        border-bottom: 1px solid #030140;
+        cursor: pointer;
+    }
+`;

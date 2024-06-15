@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    body{
+    body {
         background-color: #f0f0f0f0;
         background-position: center;
         background-size: cover;
@@ -18,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         &::-webkit-scrollbar-track {
-            background: #f0f0f0;
+            background-color: #f0f0f0;
         }
         
         &::-webkit-scrollbar-thumb {
@@ -26,4 +26,9 @@ export const GlobalStyles = createGlobalStyle`
             width: 10px;
         }
     }
+
+    ::selection {
+            background-color: #030140;
+            color: #f0f0f0;
+        }
 `;
