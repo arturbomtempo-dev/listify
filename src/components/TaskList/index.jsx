@@ -1,4 +1,11 @@
-import { CheckboxCompleted, DeleteButton, TasksList ,TaskListItem, TaskText, WarningText } from '../../assets/styles/TaskList/TaskList.style';
+import {
+    CheckboxCompleted,
+    DeleteButton,
+    TasksList,
+    TaskListItem,
+    TaskText,
+    WarningText,
+} from '../../assets/styles/TaskList/TaskList.style';
 import trash from '../../assets/Images/Icons/trash-icon.png';
 
 export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
@@ -6,7 +13,9 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
         <TasksList>
             {tasks.length === 0 ? (
                 <WarningText>
-                    {currentPage === 'ativos' ? 'Não há tarefas pendentes.' : 'Não há tarefas concluídas.'}
+                    {currentPage === 'ativos'
+                        ? 'Não há tarefas pendentes.'
+                        : 'Não há tarefas concluídas.'}
                 </WarningText>
             ) : (
                 tasks.map((task) => (
@@ -14,10 +23,12 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
                         <CheckboxCompleted
                             type="checkbox"
                             checked={task.completed}
-                            onChange={() => onCompleteTask(task.id)} 
+                            onChange={() => onCompleteTask(task.id)}
                         />
                         <TaskText>{task.text}</TaskText>
-                        <DeleteButton onClick={() => onDeleteTask(task.id)}><img src={trash} /></DeleteButton>
+                        <DeleteButton onClick={() => onDeleteTask(task.id)}>
+                            <img src={trash} />
+                        </DeleteButton>
                     </TaskListItem>
                 ))
             )}

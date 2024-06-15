@@ -21,7 +21,7 @@ export const FooterText = styled.p`
     color: #030140;
     margin-bottom: 30px;
 
-    @media screen and (max-width: 1080px){
+    @media screen and (max-width: 1080px) {
         margin-bottom: 55px;
     }
 `;

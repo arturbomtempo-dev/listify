@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const TasksList = styled.ul`
-`;
+export const TasksList = styled.ul``;
 
 export const TaskListItem = styled.li`
     display: flex;
@@ -24,8 +23,8 @@ export const CheckboxCompleted = styled.input`
     margin-right: 20px;
     cursor: pointer;
 
-    &:before{
-        content: "";
+    &:before {
+        content: '';
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,8 +33,8 @@ export const CheckboxCompleted = styled.input`
         background-color: #030140;
     }
 
-    &:checked:after{
-        content: "";
+    &:checked:after {
+        content: '';
         display: block;
         width: 5px;
         height: 10px;
@@ -73,7 +72,7 @@ export const DeleteButton = styled.button`
     flex-direction: row;
     margin-top: 5px;
 
-    img{
+    img {
         width: 30px;
         cursor: pointer;
     }

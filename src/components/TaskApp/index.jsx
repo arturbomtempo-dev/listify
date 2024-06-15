@@ -1,5 +1,13 @@
 import { useState } from 'react';
-import { AddTasksButton, ButtonContainer, PageButton, TaskForm, TaskInput, Title, LogoContainer } from '../../assets/styles/TaskApp/TaskApp.style';
+import {
+    AddTasksButton,
+    ButtonContainer,
+    PageButton,
+    TaskForm,
+    TaskInput,
+    Title,
+    LogoContainer,
+} from '../../assets/styles/TaskApp/TaskApp.style';
 import { Link } from 'react-router-dom';
 import { TaskList } from '../TaskList';
 import { v4 as uuidv4 } from 'uuid';
@@ -15,7 +23,7 @@ export function TaskApp() {
 
     const handleTaskSubmit = (e) => {
         e.preventDefault();
-        
+
         if (taskInput.trim() !== '') {
             const newTask = { id: uuidv4(), text: taskInput, completed: false };
             setTasksList([...tasksList, newTask]);
@@ -30,11 +38,11 @@ export function TaskApp() {
 
         setTasksList(updatedTasks);
     };
-    
+
     const handleDeleteTask = (taskId) => {
         const updatedTasks = tasksList.filter((task) => task.id !== taskId);
         setTasksList(updatedTasks);
-    };    
+    };
 
     const handleActiveTasks = () => {
         setCurrentPage('ativos');
@@ -44,7 +52,10 @@ export function TaskApp() {
         setCurrentPage('concluidos');
     };
 
-    const filteredTasks = currentPage === 'ativos' ? tasksList.filter(task => !task.completed) : tasksList.filter(task => task.completed);
+    const filteredTasks =
+        currentPage === 'ativos'
+            ? tasksList.filter((task) => !task.completed)
+            : tasksList.filter((task) => task.completed);
 
     return (
         <>
@@ -53,28 +64,34 @@ export function TaskApp() {
             </LogoContainer>
             <ButtonContainer>
                 <Link to="/">
-                    <PageButton onClick={handleActiveTasks}>Tarefas Pendentes<img src={pending} /></PageButton>
+                    <PageButton onClick={handleActiveTasks}>
+                        Tarefas Pendentes
+                        <img src={pending} />
+                    </PageButton>
                 </Link>
                 <Link to="/tarefas-concluidas">
-                    <PageButton onClick={handleCompletedTasks}>Tarefas Concluídas<img src={completed} /></PageButton>
+                    <PageButton onClick={handleCompletedTasks}>
+                        Tarefas Concluídas
+                        <img src={completed} />
+                    </PageButton>
                 </Link>
             </ButtonContainer>
             <Title>
-                {currentPage === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}
+                {currentPage === 'ativos'
+                    ? 'Tarefas Pendentes'
+                    : 'Tarefas Concluídas'}
             </Title>
-            {
-                currentPage === 'ativos' ? (
-                    <TaskForm onSubmit={handleTaskSubmit}>
-                        <TaskInput
-                            type="text"
-                            placeholder="Digite a tarefa"
-                            value={taskInput}
-                            onChange={(e) => setTaskInput(e.target.value)}
-                        />
-                        <AddTasksButton type="submit">+</AddTasksButton>
-                    </TaskForm>
-                ) : null
-            }
+            {currentPage === 'ativos' ? (
+                <TaskForm onSubmit={handleTaskSubmit}>
+                    <TaskInput
+                        type="text"
+                        placeholder="Digite a tarefa"
+                        value={taskInput}
+                        onChange={(e) => setTaskInput(e.target.value)}
+                    />
+                    <AddTasksButton type="submit">+</AddTasksButton>
+                </TaskForm>
+            ) : null}
             <TaskList
                 tasks={filteredTasks}
                 onCompleteTask={handleTaskComplete}

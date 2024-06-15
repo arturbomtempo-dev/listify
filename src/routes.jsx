@@ -9,7 +9,10 @@ export function AppRoutes() {
             <Routes>
                 <Route path="/" element={<BasePage />}>
                     <Route index element={<TaskApp currentPage="ativos" />} />
-                    <Route path="/tarefas-concluidas" element={<TaskApp currentPage="concluidos" />} />
+                    <Route
+                        path="/tarefas-concluidas"
+                        element={<TaskApp currentPage="concluidos" />}
+                    />
                     <Route path="*" element={<Page404 />} />
                 </Route>
             </Routes>
