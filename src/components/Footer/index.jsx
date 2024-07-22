@@ -13,8 +13,8 @@ export function Footer() {
             <SeparationLine />
             <FooterText>
                 Copyright &copy; {currentYear}{' '}
-                <FooterLink href="https://gfcodes.vercel.app/" target="_blank">
-                    GF Codes
+                <FooterLink href="https://spacefordevelopment.vercel.app/" target="_blank">
+                    Space For Development
                 </FooterLink>
                 . Todos os direitos reservados.
             </FooterText>
