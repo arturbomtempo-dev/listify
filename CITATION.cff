@@ -1,4 +1,4 @@
-cff-version: 1.0.0
+cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: To-do List
 authors:
@@ -13,7 +13,7 @@ keywords:
   - Node.js
   - JavaScript
   - Styled-components
-repository-code: https://github.com/GF-Codes/To-do-list
+repository-code: https://github.com/SpaceForDevelopment/To-do-list
 license: MIT
 version: 1.0.2
 date-released: 2023-10-20
