@@ -76,11 +76,7 @@ export function TaskApp() {
                     </PageButton>
                 </Link>
             </ButtonContainer>
-            <Title>
-                {currentPage === 'ativos'
-                    ? 'Tarefas Pendentes'
-                    : 'Tarefas Concluídas'}
-            </Title>
+            <Title>{currentPage === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}</Title>
             {currentPage === 'ativos' ? (
                 <TaskForm onSubmit={handleTaskSubmit}>
                     <TaskInput
