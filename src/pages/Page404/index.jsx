@@ -1,17 +1,17 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import completed from '../../assets/Images/Icons/completed-icon.png';
+import pending from '../../assets/Images/Icons/pending-icon.png';
 import {
     ButtonContainer,
     LogoContainer,
     PageButton,
     Title,
-} from '../../assets/styles/TaskApp/TaskApp.style';
+} from '../../assets/styles/Task/TaskApp/TaskApp.style';
 import logo from '/logo.png';
-import { useState } from 'react';
-import pending from '../../assets/Images/Icons/pending-icon.png';
-import completed from '../../assets/Images/Icons/completed-icon.png';
 
 export function Page404() {
-    const [currentPage, setCurrentPage] = useState('ativos');
+    const [setCurrentPage] = useState('ativos');
 
     const handleActiveTasks = () => {
         setCurrentPage('ativos');

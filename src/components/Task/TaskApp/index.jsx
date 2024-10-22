@@ -1,20 +1,20 @@
+import { useLocalStorage } from '@uidotdev/usehooks';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import completed from '../../../assets/Images/Icons/completed-icon.png';
+import pending from '../../../assets/Images/Icons/pending-icon.png';
 import {
     AddTasksButton,
     ButtonContainer,
+    LogoContainer,
     PageButton,
     TaskForm,
     TaskInput,
     Title,
-    LogoContainer,
-} from '../../assets/styles/TaskApp/TaskApp.style';
-import { Link } from 'react-router-dom';
+} from '../../../assets/styles/Task/TaskApp/TaskApp.style';
 import { TaskList } from '../TaskList';
-import { v4 as uuidv4 } from 'uuid';
 import logo from '/logo.png';
-import pending from '../../assets/Images/Icons/pending-icon.png';
-import completed from '../../assets/Images/Icons/completed-icon.png';
-import { useLocalStorage } from '@uidotdev/usehooks';
 
 export function TaskApp() {
     const [tasksList, setTasksList] = useLocalStorage('tasksList', []);

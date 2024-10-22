@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types';
+import trash from '../../../assets/Images/Icons/trash-icon.png';
 import {
     CheckboxCompleted,
     DeleteButton,
-    TasksList,
     TaskListItem,
+    TasksList,
     TaskText,
     WarningText,
-} from '../../assets/styles/TaskList/TaskList.style';
-import trash from '../../assets/Images/Icons/trash-icon.png';
+} from '../../../assets/styles/Task/TaskList/TaskList.style';
 
 export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
     return (
@@ -35,3 +36,16 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask, currentPage }) {
         </TasksList>
     );
 }
+
+TaskList.propTypes = {
+    tasks: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired,
+            completed: PropTypes.bool.isRequired,
+        })
+    ).isRequired,
+    onCompleteTask: PropTypes.func.isRequired,
+    onDeleteTask: PropTypes.func.isRequired,
+    currentPage: PropTypes.string.isRequired,
+};

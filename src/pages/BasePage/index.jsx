@@ -1,6 +1,6 @@
-import { Container } from '../../components/Container';
-import { Footer } from '../../components/Footer';
 import { Outlet } from 'react-router-dom';
+import { Container } from '../../components/Common/Container';
+import { Footer } from '../../components/Common/Footer';
 
 export function BasePage() {
     return (

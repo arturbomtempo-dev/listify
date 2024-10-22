@@ -1,9 +1,9 @@
 import {
-    FooterText,
-    StyledFooter,
-    SeparationLine,
     FooterLink,
-} from '../../assets/styles/Footer/Footer.style';
+    FooterText,
+    SeparationLine,
+    StyledFooter,
+} from '../../../assets/styles/Common/Footer/Footer.style';
 
 export function Footer() {
     const currentYear = new Date().getFullYear();

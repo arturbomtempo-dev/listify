@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { TaskApp } from './components/Task/TaskApp';
 import { BasePage } from './pages/BasePage';
-import { TaskApp } from './components/TaskApp';
 import { Page404 } from './pages/Page404';
 
 export function AppRoutes() {
