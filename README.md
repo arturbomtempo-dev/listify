@@ -17,7 +17,7 @@ The program developed consists of creating a to-do list in which the user can en
 
 ## 📁 Project access
 
-You can view the hosted page by clicking [here](https://to-do-list-framework.vercel.app/).
+You can view the hosted page by clicking [here](https://listify-site.vercel.app/).
 
 ## 👥 Developers
 
