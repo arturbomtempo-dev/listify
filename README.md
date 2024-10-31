@@ -1,8 +1,8 @@
-# To-do list
+# Listify
 
 The project consists of a school assignment developed in pairs, and its main objective is to consolidate the concepts of React Hooks studied during the course.
 
-<img width="1440" alt="Image of the to-do list project" src="https://github.com/ArturColen/To-do-list/assets/96635074/7d5fb1c6-2f67-4669-962f-5aac4bfa1eec">
+<img width="1440" alt="Image of the Listify project" src="https://github.com/ArturColen/To-do-list/assets/96635074/7d5fb1c6-2f67-4669-962f-5aac4bfa1eec">
 
 ## 🔨 Project functionality
 
