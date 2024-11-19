@@ -88,7 +88,9 @@ export const TaskApp: React.FC<TaskAppProps> = ({ currentPage = 'ativos' }) => {
                     </PageButton>
                 </Link>
             </ButtonContainer>
-            <Title>{currentPageState === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}</Title>
+            <Title>
+                {currentPageState === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}
+            </Title>
             {currentPageState === 'ativos' ? (
                 <TaskForm onSubmit={handleTaskSubmit}>
                     <TaskInput
