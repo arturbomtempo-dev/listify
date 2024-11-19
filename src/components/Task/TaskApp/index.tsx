@@ -16,22 +16,34 @@ import {
 import { TaskList } from '../TaskList';
 import logo from '/logo.png';
 
-export function TaskApp() {
-    const [tasksList, setTasksList] = useLocalStorage('tasksList', []);
-    const [taskInput, setTaskInput] = useState('');
-    const [currentPage, setCurrentPage] = useState('ativos');
+interface Task {
+    id: string;
+    text: string;
+    completed: boolean;
+}
 
-    const handleTaskSubmit = (e) => {
+type Page = 'ativos' | 'concluidos';
+
+interface TaskAppProps {
+    currentPage?: Page;
+}
+
+export const TaskApp: React.FC<TaskAppProps> = ({ currentPage = 'ativos' }) => {
+    const [tasksList, setTasksList] = useLocalStorage<Task[]>('tasksList', []);
+    const [taskInput, setTaskInput] = useState<string>('');
+    const [currentPageState, setCurrentPageState] = useState<Page>(currentPage);
+
+    const handleTaskSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (taskInput.trim() !== '') {
-            const newTask = { id: uuidv4(), text: taskInput, completed: false };
+            const newTask: Task = { id: uuidv4(), text: taskInput, completed: false };
             setTasksList([...tasksList, newTask]);
             setTaskInput('');
         }
     };
 
-    const handleTaskComplete = (taskId) => {
+    const handleTaskComplete = (taskId: string) => {
         const updatedTasks = tasksList.map((task) =>
             task.id === taskId ? { ...task, completed: !task.completed } : task
         );
@@ -39,21 +51,21 @@ export function TaskApp() {
         setTasksList(updatedTasks);
     };
 
-    const handleDeleteTask = (taskId) => {
+    const handleDeleteTask = (taskId: string) => {
         const updatedTasks = tasksList.filter((task) => task.id !== taskId);
         setTasksList(updatedTasks);
     };
 
     const handleActiveTasks = () => {
-        setCurrentPage('ativos');
+        setCurrentPageState('ativos');
     };
 
     const handleCompletedTasks = () => {
-        setCurrentPage('concluidos');
+        setCurrentPageState('concluidos');
     };
 
     const filteredTasks =
-        currentPage === 'ativos'
+        currentPageState === 'ativos'
             ? tasksList.filter((task) => !task.completed)
             : tasksList.filter((task) => task.completed);
 
@@ -66,18 +78,18 @@ export function TaskApp() {
                 <Link to="/">
                     <PageButton onClick={handleActiveTasks}>
                         Tarefas Pendentes
-                        <img src={pending} />
+                        <img src={pending} alt="Ícone de tarefas pendentes" />
                     </PageButton>
                 </Link>
                 <Link to="/tarefas-concluidas">
                     <PageButton onClick={handleCompletedTasks}>
                         Tarefas Concluídas
-                        <img src={completed} />
+                        <img src={completed} alt="Ícone de tarefas concluídas" />
                     </PageButton>
                 </Link>
             </ButtonContainer>
-            <Title>{currentPage === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}</Title>
-            {currentPage === 'ativos' ? (
+            <Title>{currentPageState === 'ativos' ? 'Tarefas Pendentes' : 'Tarefas Concluídas'}</Title>
+            {currentPageState === 'ativos' ? (
                 <TaskForm onSubmit={handleTaskSubmit}>
                     <TaskInput
                         type="text"
@@ -92,8 +104,8 @@ export function TaskApp() {
                 tasks={filteredTasks}
                 onCompleteTask={handleTaskComplete}
                 onDeleteTask={handleDeleteTask}
-                currentPage={currentPage}
+                currentPage={currentPageState}
             />
         </>
     );
-}
+};
