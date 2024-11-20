@@ -21,6 +21,8 @@ export function Page404() {
         setCurrentPage('concluidos');
     };
 
+    console.log(`Estado atual: ${currentPage}`);
+
     return (
         <>
             <LogoContainer>
