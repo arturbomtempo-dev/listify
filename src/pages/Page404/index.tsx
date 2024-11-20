@@ -11,7 +11,7 @@ import {
 import logo from '/logo.png';
 
 export function Page404() {
-    const [setCurrentPage] = useState('ativos');
+    const [currentPage, setCurrentPage] = useState<string>('ativos');
 
     const handleActiveTasks = () => {
         setCurrentPage('ativos');
@@ -24,23 +24,23 @@ export function Page404() {
     return (
         <>
             <LogoContainer>
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo da aplicação" />
             </LogoContainer>
             <ButtonContainer>
                 <Link to="/">
                     <PageButton onClick={handleActiveTasks}>
                         Tarefas Pendentes
-                        <img src={pending} />
+                        <img src={pending} alt="Ícone de tarefas pendentes" />
                     </PageButton>
                 </Link>
                 <Link to="/tarefas-concluidas">
                     <PageButton onClick={handleCompletedTasks}>
                         Tarefas Concluídas
-                        <img src={completed} />
+                        <img src={completed} alt="Ícone de tarefas concluídas" />
                     </PageButton>
                 </Link>
             </ButtonContainer>
-            <Title>Página não encontrada </Title>
+            <Title>Página não encontrada</Title>
         </>
     );
 }
